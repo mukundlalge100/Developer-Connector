@@ -3,6 +3,5 @@ config/Keys_dev.js
 package-lock.json
 client/src/Keys
 client/node_modules
-client/src/Assets
 client/package-lock.json
 client/build
