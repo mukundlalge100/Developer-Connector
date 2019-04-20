@@ -1,0 +1,105 @@
+.ProfileAbout {
+  padding: 4rem;
+
+  display: grid;
+  width: 100%;
+  min-height: 50vh;
+  grid-gap: 5rem;
+  background-color: #f7f5f5;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media only screen and (max-width: 37.5em) {
+    & {
+      grid-template-columns: 1fr;
+    }
+  }
+  &_Bio {
+    margin-top: 4rem;
+    color: #fff;
+    box-shadow: 0rem 0rem 1rem rgba($color: #405752, $alpha: 1);
+    background-image: linear-gradient(
+      to bottom right,
+      #1c5e4a,
+      #0d6063,
+      #083826
+    );
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: grid;
+    align-items: center;
+    grid-template-rows: min-content 1fr;
+    justify-items: center;
+
+    &__Header {
+      display: flex;
+      align-items: center;
+      &_Svg {
+        height: 3rem;
+        width: 3rem;
+        fill: #fff;
+        @media only screen and (max-width: 37.5em) {
+          & {
+            height: 2rem;
+            width: 2rem;
+          }
+        }
+      }
+    }
+  }
+  &_Skills {
+    margin-top: 4rem;
+    color: #fff;
+    background-image: linear-gradient(
+      to bottom right,
+      #1c5e4a,
+      #0d6063,
+      #083826
+    );
+    box-shadow: 0rem 0rem 1rem rgba($color: #405752, $alpha: 1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: grid;
+    justify-items: center;
+
+    @media only screen and (max-width: 37.5em) {
+      & {
+        margin-top: 0rem;
+      }
+    }
+
+    &__Header {
+      display: flex;
+      align-items: center;
+      &_Svg {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        fill: #fff;
+        @media only screen and (max-width: 37.5em) {
+          & {
+            height: 2rem;
+            width: 2rem;
+          }
+        }
+      }
+    }
+
+    &__List {
+      display: grid;
+      grid-gap: 1rem;
+      list-style: none;
+      font-size: 1.4rem;
+      &_Item {
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+        &__Icon {
+          width: 2rem;
+          height: 2rem;
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

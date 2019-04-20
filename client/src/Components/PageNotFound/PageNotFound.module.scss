@@ -1,0 +1,10 @@
+.PageNotFound {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  &_Image {
+    width: 70%;
+    height: 100%;
+  }
+}

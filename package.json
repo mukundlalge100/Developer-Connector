@@ -1,0 +1,27 @@
+{
+  "name": "developer-connector",
+  "version": "1.0.0",
+  "description": "Developer Profile App\t",
+  "main": "App.js",
+  "scripts": {
+    "build": "node App.js",
+    "start": "nodemon App.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION =false npm install --prefix ../deve-connector-client && npm run build --prefix ../deve-connector-client"
+  },
+  "author": "Mukund Lalge",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.16",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.11.0"
+  }
+}

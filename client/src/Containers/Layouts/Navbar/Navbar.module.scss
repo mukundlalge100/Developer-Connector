@@ -1,0 +1,105 @@
+.Navbar {
+  background-color: #333f4b;
+  height: 6rem;
+  width: 100%;
+  &_Nav {
+    height: 100%;
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    justify-content: space-around;
+    align-content: center;
+
+    @media only screen and (max-width: 37.5em) {
+      &__SideDrawerHide {
+        display: none;
+      }
+    }
+    &__SideDrawerShow {
+      margin-left: 3rem;
+      align-content: start;
+      grid-gap: 10rem;
+      margin-top: 4rem;
+      display: grid;
+      justify-content: start;
+      grid-template-columns: none;
+    }
+
+    &__LinkContainer {
+      display: grid;
+      grid-template-columns: max-content max-content max-content;
+      grid-gap: 3rem;
+
+      @media only screen and (max-width: 37.5em) {
+        & {
+          grid-template-columns: none;
+          grid-gap: 10rem;
+        }
+      }
+    }
+
+    &__Link {
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 2rem;
+      color: #b9b3b3;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+
+      @media only screen and (max-width: 56.25em) {
+        & {
+          font-size: 1.6rem;
+        }
+      }
+
+      &_Image {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+        transition: all 0.4s;
+      }
+      &:hover &_Image {
+        transform: scale(1.2);
+      }
+      &:hover {
+        color: #fff;
+      }
+      &_Brand {
+        color: #fff;
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+
+        @media only screen and (max-width: 56.25em) {
+          & {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    &__NavbarSVG {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 0.5rem;
+      fill: #b9b3b3;
+    }
+
+    &__Link:hover &__NavbarSVG {
+      fill: #fff;
+    }
+
+    &__BrandSVG {
+      height: 5rem;
+      width: 5rem;
+      margin-right: 0.5rem;
+      fill: #fff;
+
+      @media only screen and (max-width: 56.25em) {
+        & {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.AddPost {
+  display: grid;
+  width: 80%;
+  grid-gap: 2rem;
+  &_Form {
+    display: grid;
+
+    &__Button {
+      justify-self: start;
+      margin-left: 1rem;
+      background-image: linear-gradient(to right bottom, #00bfff, #00ced1);
+      &:hover {
+        background-image: linear-gradient(to right bottom, #10a0cf, #19a9ac);
+      }
+    }
+  }
+}

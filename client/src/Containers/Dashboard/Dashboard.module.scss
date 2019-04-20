@@ -1,0 +1,21 @@
+.Dashboard {
+  &_Container {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    grid-gap: 2rem;
+
+    &__Link {
+      text-decoration: none;
+      color: #00bfff;
+    }
+  }
+  &_Button {
+    margin: 3rem 0rem;
+    background-image: linear-gradient(to right bottom, #e2341d, #f3260b);
+
+    &:hover {
+      background-image: linear-gradient(to right bottom, #b32c1b, #b92815);
+    }
+  }
+}

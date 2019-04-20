@@ -1,0 +1,100 @@
+.PostItem {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: auto 1fr;
+  grid-gap: 3rem;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  @media only screen and (max-width: 37.5em) {
+    & {
+      grid-gap: 1.5rem;
+    }
+  }
+
+  &_LinkContainer {
+    &__Link {
+      text-decoration: none;
+
+      &_UserName {
+        color: #5f5f5f;
+        font-size: 1.6rem;
+        text-transform: capitalize;
+        letter-spacing: 0.1rem;
+
+        @media only screen and (max-width: 37.5em) {
+          & {
+            font-size: 1.3rem;
+          }
+        }
+      }
+      &_Image {
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+
+        @media only screen and (max-width: 37.5em) {
+          & {
+            height: 5rem;
+            width: 5rem;
+          }
+        }
+      }
+    }
+  }
+  &_PostDetails {
+    display: grid;
+    grid-gap: 1.5rem;
+
+    &__Icon {
+      fill: #494747;
+      height: 2rem;
+      width: 2rem;
+      cursor: pointer;
+
+      &_Liked {
+        fill: #01fd87 !important;
+      }
+
+      &_DisLiked {
+        fill: #fd014d !important;
+      }
+
+      &_Delete {
+        fill: #5f5f5f;
+
+        &:hover {
+          fill: #ff0000;
+        }
+      }
+    }
+    &__Link {
+      font-size: 1.6rem;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      padding: 1rem 1.5rem;
+      background-image: linear-gradient(to right bottom, #00bfff, #00ced1);
+      &:hover {
+        background-image: linear-gradient(to right bottom, #10a0cf, #19a9ac);
+      }
+
+      @media only screen and (max-width: 37.5em) {
+        & {
+          font-size: 1.3rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+    &__Actions {
+      display: grid;
+      grid-gap: 2rem;
+      align-items: baseline;
+      grid-template-columns: repeat(4, min-content);
+
+      &_Container {
+        display: grid;
+        justify-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.PostComment {
+  display: grid;
+  grid-gap: 2rem;
+  width: 70%;
+  &_Items {
+    transform: skew(-0.3deg);
+    display: grid;
+    padding: 1rem;
+    grid-gap: 1rem;
+    grid-template-columns: auto 1fr;
+    box-shadow: 0rem 0rem 0.5rem rgba(#07796f, 0.4);
+    position: relative;
+    &__User {
+      align-self: start;
+      &_Name {
+        font-size: 1.2rem;
+      }
+      transform: skew(0.3deg);
+      display: grid;
+      &_Image {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+      }
+    }
+    &__Text {
+      padding: 0.5rem;
+      hyphens: auto;
+      transform: skew(0.3deg);
+      &_Icon {
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: #07796f;
+        cursor: pointer;
+        &:hover {
+          fill: #ff0000;
+        }
+      }
+    }
+  }
+  &:last-child {
+    margin-bottom: 5rem;
+  }
+}

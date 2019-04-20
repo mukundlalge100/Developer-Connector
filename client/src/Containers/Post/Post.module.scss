@@ -1,0 +1,8 @@
+.Post {
+  min-height: 85vh;
+  &_Container {
+    display: grid;
+    justify-items: center;
+    grid-gap: 3rem;
+  }
+}

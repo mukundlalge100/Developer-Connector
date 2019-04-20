@@ -1,0 +1,39 @@
+.Profile {
+  display: grid;
+  justify-items: center;
+
+  &_Container {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+  }
+  &_Header {
+    display: grid;
+    grid-gap: 2rem;
+    justify-items: center;
+    width: 70%;
+  }
+  &_Form {
+    display: grid;
+    margin: 2rem;
+    width: 70%;
+
+    &__Button {
+      justify-self: center;
+      border-radius: 0.5rem;
+      background-image: linear-gradient(to right bottom, #00bfff, #00ced1);
+      &:hover {
+        background-image: linear-gradient(to right bottom, #25a2cc, #0ea6a8);
+      }
+    }
+    &__Social {
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      margin-left: 1rem;
+      &_Optional {
+        font-size: 1.6rem;
+        margin-left: 2rem;
+      }
+    }
+  }
+}

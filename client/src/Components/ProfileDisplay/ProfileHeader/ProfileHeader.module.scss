@@ -1,0 +1,48 @@
+.ProfileHeader {
+  display: grid;
+  color: #fff;
+  min-height: 65vh;
+  width: 100%;
+  justify-items: center;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(#333f4b, 0.8),
+      rgba(#36534f, 0.8),
+      rgba(#3d615e, 0.8)
+    ),
+    url("../../../Assets/Images/developer.jpg");
+
+  &_Header {
+    display: grid;
+    grid-gap: 2rem;
+    margin-bottom: 3rem;
+    &__ProfileImage {
+      &_Image {
+        background-position: center;
+        width: 20rem;
+        border-radius: 50%;
+        height: 20rem;
+      }
+    }
+    &__Svg {
+      margin: 0rem 1rem;
+      cursor: pointer;
+      fill: #fff;
+      @media only screen and (max-width: 37.5em) {
+        & {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+      &:hover {
+        fill: #0ed6b5;
+      }
+    }
+    &__Heading {
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+    }
+  }
+}

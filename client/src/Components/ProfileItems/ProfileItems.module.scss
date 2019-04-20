@@ -1,0 +1,78 @@
+.ProfileItems {
+  padding: 2rem;
+  display: grid;
+  transform: skewX(-5deg);
+  grid-template-columns: max-content 1fr max-content;
+  grid-gap: 3rem;
+  box-shadow: 0rem 0rem 1rem rgba($color: #000000, $alpha: 0.2);
+  background-color: rgba($color: #fff, $alpha: 0.1);
+
+  @media only screen and (max-width: 25em) {
+    & {
+      grid-gap: 1rem;
+      padding: 1rem;
+    }
+  }
+  &_Avatar {
+    transform: skewX(5deg);
+    align-self: center;
+    &__Image {
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+
+      @media only screen and (max-width: 37.5em) {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+  &:hover &_Avatar__Image {
+    filter: brightness((110%));
+  }
+
+  &_Information {
+    transform: skewX(5deg);
+    display: grid;
+    grid-gap: 1rem;
+    justify-items: start;
+    align-content: center;
+    &__Button {
+      margin-top: 2rem;
+      background-image: linear-gradient(to right bottom, #00bfff, #00ced1);
+
+      &:hover {
+        background-image: linear-gradient(to right bottom, #20a0ca, #14b3b6);
+      }
+    }
+  }
+
+  &_Skills {
+    transform: skewX(5deg);
+    display: grid;
+    grid-gap: 1rem;
+    justify-self: flex-end;
+    &__List {
+      list-style: none;
+      font-size: 1.4rem;
+      display: grid;
+      grid-gap: 1rem;
+
+      @media only screen and (max-width: 25em) {
+        & {
+          font-size: 1rem;
+        }
+      }
+      &_Item {
+        display: flex;
+        align-items: center;
+
+        &__Icon {
+          width: 2rem;
+          height: 2rem;
+          fill: #eee;
+        }
+      }
+    }
+  }
+}

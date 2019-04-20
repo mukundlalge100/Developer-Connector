@@ -1,0 +1,9 @@
+.PostFeed {
+  display: grid;
+  grid-gap: 3rem;
+  width: 80%;
+
+  &:last-child {
+    margin-bottom: 5rem;
+  }
+}

@@ -1,0 +1,30 @@
+.Profiles {
+  display: grid;
+  justify-items: center;
+  grid-gap: 2rem;
+  align-content: start;
+  background-position: center;
+  background-size: cover;
+  color: #dad6d6;
+  min-height: 85vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(#333f4b, 0.9),
+      rgba(#36534f, 0.9),
+      rgba(#3d615e, 0.9)
+    ),
+    url("../../Assets/Images/programmer.jpg");
+
+  &_Container {
+    display: grid;
+    width: 80%;
+    grid-gap: 3rem;
+
+    &:last-child {
+      margin-bottom: 8rem;
+    }
+  }
+  &_Heading {
+    color: #dad6d6;
+  }
+}

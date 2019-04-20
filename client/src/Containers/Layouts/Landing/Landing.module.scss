@@ -1,0 +1,34 @@
+.Landing {
+  height: 100vh;
+  color: #fff;
+  padding: 4rem;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 3rem;
+  display: grid;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(#283e3f, 0.7),
+      rgba(#2f4f4f, 0.7)
+    ),
+    url("../../../Assets/Images/showcase.jpg");
+
+  h1 {
+    letter-spacing: 0.5rem;
+  }
+  &_Actions {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 4rem;
+    justify-content: center;
+  }
+  &_Button {
+    background-image: linear-gradient(to right bottom, #00bfff, #00ced1);
+    &:hover {
+      box-shadow: 0rem 0.3rem 0.3rem rgba($color: #fff, $alpha: 1) !important;
+      background-image: linear-gradient(to right bottom, #1ca3cf, #1ab5b8);
+    }
+  }
+}

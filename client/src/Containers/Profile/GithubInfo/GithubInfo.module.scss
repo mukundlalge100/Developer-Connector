@@ -1,0 +1,53 @@
+.GithubInfo {
+  display: grid;
+  width: 100%;
+  grid-gap: 2rem;
+  background-color: #f4f7f8;
+  justify-items: center;
+  &_Repos {
+    display: grid;
+    width: 80%;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    align-content: center;
+    padding: 1rem;
+    box-shadow: 0rem 0rem 0.7rem rgba($color: #87ceeb, $alpha: 1);
+
+    @media only screen and (max-width: 37em) {
+      grid-template-columns: 1fr;
+    }
+
+    &:last-child {
+      margin-bottom: 6rem;
+    }
+    &__LinkContainer {
+      &_Link {
+        text-decoration: none;
+        color: #87ceeb;
+        font-size: 2rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__Info {
+      display: flex;
+
+      & span {
+        margin-right: 1rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+      }
+      &_Svg {
+        margin-right: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        fill: #87ceeb;
+      }
+    }
+  }
+}

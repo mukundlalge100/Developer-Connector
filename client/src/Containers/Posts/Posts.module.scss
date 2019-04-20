@@ -1,0 +1,10 @@
+.Posts {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  grid-gap: 5rem;
+  min-height: 85vh;
+  &_Heading {
+    align-self: start;
+  }
+}

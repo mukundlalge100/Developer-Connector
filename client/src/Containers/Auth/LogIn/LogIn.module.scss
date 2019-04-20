@@ -1,0 +1,33 @@
+.LogIn {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  &_Container {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+  &_Form {
+    margin-top: 2rem;
+    width: 60%;
+    display: grid;
+    justify-items: center;
+
+    @media only screen and (max-width: 37.5em) {
+      & {
+        width: 80%;
+      }
+    }
+    &__Text {
+      font-size: 1.2rem;
+    }
+  }
+  &_Button {
+    margin-bottom: 2rem;
+    background-image: linear-gradient(to right bottom, #00bfff, #00ced1);
+    &:hover {
+      background-image: linear-gradient(to right bottom, #10a0cf, #19a9ac);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.ProfileActions {
+  display: flex;
+
+  &_Link {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    color: #5f5f5f;
+    background-color: #e0e0e0;
+
+    @media only screen and (max-width: 37.5em) {
+      & {
+        font-size: 1.3rem;
+      }
+    }
+    &:hover {
+      background-color: #5f5f5f;
+      color: #e0e0e0;
+    }
+    &:hover &__Icons {
+      fill: #00ffff;
+    }
+
+    &__Icons {
+      margin-right: 1rem;
+      fill: #245252;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

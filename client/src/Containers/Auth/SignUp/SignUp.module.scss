@@ -1,0 +1,27 @@
+.SignUp {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+
+  &_Container {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+  &_Form {
+    margin-top: 2rem;
+    width: 60%;
+    display: grid;
+    grid-gap: 0.5rem;
+  }
+
+  &_Button {
+    justify-self: center;
+    margin-bottom: 2rem;
+    &:hover {
+      background-image: linear-gradient(to right bottom, #1ca4d1, #16adaf);
+    }
+    background-image: linear-gradient(to right bottom, #00bfff, #00ced1);
+  }
+}

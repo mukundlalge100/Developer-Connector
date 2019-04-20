@@ -1,0 +1,124 @@
+.Input {
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+
+  &__CheckBox {
+    display: flex;
+    align-items: center;
+  }
+  &__InputElement {
+    padding: 1rem;
+    width: 100%;
+    border: 0.1px solid #948f8f;
+    box-shadow: 0rem 0rem 0.3rem #948f8f;
+    border-radius: 0.5rem;
+
+    &:focus {
+      box-shadow: 0rem 0rem 0.6rem #06e663;
+      outline: none;
+    }
+  }
+
+  &__InputElement:placeholder-shown ~ &__Label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__Label {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+
+    &_CheckBox {
+      margin-left: 1rem;
+      margin-top: 0rem;
+      display: inline-block;
+    }
+  }
+
+  &__Invalid {
+    box-shadow: 0rem 0rem 0.6rem #f53a0b;
+  }
+
+  &__IsInvalid {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    color: #ff0000;
+    margin-top: 0.7rem;
+  }
+  // &__Tooltip {
+  //   visibility: hidden;
+  //   background-image: linear-gradient(#a82222, #dc143c, #b22222);
+  //   color: #fff;
+  //   font-size: 1rem;
+  //   border-radius: 6px;
+  //   padding: 0.7rem;
+  //   position: absolute;
+  //   z-index: 1;
+  //   bottom: 95%;
+  //   left: 50%;
+  //   margin-left: -60px;
+  //   opacity: 0;
+  //   transition: opacity 0.3s;
+  // }
+  // &__Tooltip::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 100%;
+  //   left: 50%;
+  //   margin-left: -5px;
+  //   border-width: 5px;
+  //   border-style: solid;
+  //   border-color: #a82222 transparent transparent transparent;
+  // }
+  // &:hover &__Tooltip {
+  //   visibility: visible;
+  //   opacity: 1;
+  // }
+
+  &__Text {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+  &__ShowHidePasswordIcon {
+    cursor: grab;
+    position: absolute;
+    fill: #494848;
+    height: 2.2rem;
+    width: 2.2rem;
+    right: 2rem;
+    top: 1.5rem;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  &__SocialIcons {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    left: -3rem;
+    top: 1.3rem;
+
+    &_Facebook {
+      fill: #0638a3;
+    }
+    &_Twitter {
+      fill: #00d9ff;
+    }
+    &_Instagram {
+      fill: #b4045c;
+    }
+    &_Linkedin {
+      fill: #4165b1;
+    }
+    &_Youtube {
+      fill: #ff0000;
+    }
+  }
+}
