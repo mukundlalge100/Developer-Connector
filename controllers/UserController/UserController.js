@@ -79,7 +79,7 @@ exports.postLogIn = async (request, response, next) => {
       avatar: user.avatar
     };
     // JWT TOKEN AFTER SIGN IN ...
-    const token = jwt.sign(payload, keys.secretOrKey, { expiresIn: "2h" });
+    const token = jwt.sign(payload, keys.SECRET_OR_KEY, { expiresIn: "2h" });
     response.json({ success: true, token: "Bearer " + token });
   } catch (error) {
     console.log(error);
