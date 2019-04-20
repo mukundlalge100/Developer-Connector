@@ -26,7 +26,6 @@ class AddComment extends Component {
       userName: this.props.user.userName,
       avatar: this.props.user.avatar
     };
-    console.log(commentFormData);
     this.props.onAddComment(this.props.postId, commentFormData);
   };
   render() {
