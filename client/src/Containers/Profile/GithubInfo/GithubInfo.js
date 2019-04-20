@@ -7,7 +7,7 @@ import { ReactComponent as Eye } from "../../../Assets/SVG/visibility.svg";
 import { connect } from "react-redux";
 import * as actions from "../../../Store/Actions/ProfileAction";
 import SomethingWentWrong from "../../../HOC/ErrorHandler/SomethingWentWrong";
-import { Github } from "../../../keys/Keys";
+import { Github } from "../../../Keys/Keys";
 
 class GithubInfo extends PureComponent {
   state = {

@@ -54,11 +54,9 @@ app.use("/api/posts", postRoutes);
 // SERVER STATIC ASSETS IF IN PRODUCTION ...
 if (process.env.NODE_ENV === "production") {
   // SET STATIC FOLDER ...
-  app.use(express.static("../deve-connector-client/build"));
+  app.use(express.static("client/build"));
 
   app.get("*", (request, response) => {
-    response.sendFile(
-      path.resolve("../" + "deve-connector-client", "build", "index.html")
-    );
+    response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
