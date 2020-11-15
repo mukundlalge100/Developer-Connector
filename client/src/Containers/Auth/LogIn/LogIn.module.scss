@@ -1,22 +1,35 @@
 .LogIn {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  align-items: center;
+  align-content: center;
   justify-items: center;
+  width: 100%;
+
+  &_LogInFormLink {
+    text-decoration: none;
+    font-size: 1.6rem;
+    border-bottom: 1px solid transparent;
+    color: #0000ff;
+    &:hover {
+      border-bottom: 1px solid #0000ff;
+    }
+    &:active {
+      color: #0000ff;
+    }
+  }
   &_Container {
     width: 100%;
     display: grid;
     justify-items: center;
   }
   &_Form {
-    margin-top: 2rem;
     width: 60%;
     display: grid;
+    grid-gap: 1rem;
     justify-items: center;
-
     @media only screen and (max-width: 37.5em) {
       & {
-        width: 80%;
+        width: 90%;
       }
     }
     &__Text {

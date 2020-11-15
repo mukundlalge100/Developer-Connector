@@ -3,7 +3,7 @@ export {
   authSignUp,
   authCheckLogInState,
   authLogOut,
-  authSomethingWentWrongCloseHandler
+  authSomethingWentWrongCloseHandler,
 } from "./AuthAction";
 
 export {
@@ -17,7 +17,7 @@ export {
   deleteExperience,
   deleteEducation,
   getProfiles,
-  profileSomethingWentWrongCloseHandler
+  profileSomethingWentWrongCloseHandler,
 } from "./ProfileAction";
 
 export {
@@ -30,5 +30,5 @@ export {
   clearCurrentPost,
   getPosts,
   getPost,
-  postSomethingWentWrongCloseHandler
+  postSomethingWentWrongCloseHandler,
 } from "./PostAction";

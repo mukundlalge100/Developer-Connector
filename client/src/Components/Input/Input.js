@@ -99,37 +99,27 @@ const Input = ({
 
       {name === "facebook" ? (
         <FaceBookSVG
-          className={`${classes.Input__SocialIcons} ${
-            classes.Input__SocialIcons_Facebook
-          }`}
+          className={`${classes.Input__SocialIcons} ${classes.Input__SocialIcons_Facebook}`}
         />
       ) : null}
       {name === "twitter" ? (
         <TwitterSVG
-          className={`${classes.Input__SocialIcons} ${
-            classes.Input__SocialIcons_Twitter
-          }`}
+          className={`${classes.Input__SocialIcons} ${classes.Input__SocialIcons_Twitter}`}
         />
       ) : null}
       {name === "youtube" ? (
         <YouTubeSVG
-          className={`${classes.Input__SocialIcons} ${
-            classes.Input__SocialIcons_Youtube
-          }`}
+          className={`${classes.Input__SocialIcons} ${classes.Input__SocialIcons_Youtube}`}
         />
       ) : null}
       {name === "linkedin" ? (
         <LinkedinSVG
-          className={`${classes.Input__SocialIcons} ${
-            classes.Input__SocialIcons_Linkedin
-          }`}
+          className={`${classes.Input__SocialIcons} ${classes.Input__SocialIcons_Linkedin}`}
         />
       ) : null}
       {name === "instagram" ? (
         <InstagramSVG
-          className={`${classes.Input__SocialIcons} ${
-            classes.Input__SocialIcons_Instagram
-          }`}
+          className={`${classes.Input__SocialIcons} ${classes.Input__SocialIcons_Instagram}`}
         />
       ) : null}
 

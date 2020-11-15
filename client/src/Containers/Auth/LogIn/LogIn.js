@@ -3,6 +3,8 @@ import classes from "./LogIn.module.scss";
 import utilClasses from "../../../Util/Util.module.scss";
 import { connect } from "react-redux";
 import * as actions from "../../../Store/Actions/IndexAction";
+
+import { Link } from "react-router-dom";
 import Loader from "../../../Components/UI/Loader/Loader";
 import Input from "../../../Components/Input/Input";
 import SomethingWentWrong from "../../../HOC/ErrorHandler/SomethingWentWrong";
@@ -12,9 +14,9 @@ class LogIn extends Component {
   state = {
     logInForm: {
       email: "",
-      password: ""
+      password: "",
     },
-    showHidePassword: false
+    showHidePassword: false,
   };
 
   componentDidMount = () => {
@@ -27,18 +29,18 @@ class LogIn extends Component {
     this.props.onSomethingWentWrongClose();
   };
   // INPUT CHANGE HANDLER METHOD ...
-  inputChangeHandler = event => {
+  inputChangeHandler = (event) => {
     const logInForm = { ...this.state.logInForm };
     logInForm[event.target.name] = event.target.value;
     this.setState({ logInForm: logInForm });
   };
 
   //LOGIN FORM SUBMIT HANDLER METHOD ...
-  logInFormSubmitHandler = event => {
+  logInFormSubmitHandler = (event) => {
     event.preventDefault();
     const userData = {
       email: this.state.logInForm.email,
-      password: this.state.logInForm.password
+      password: this.state.logInForm.password,
     };
     // CALLING LOGIN METHOD IN REDUX STORE...
     this.props.onAuthLogIn(userData, this.props.history);
@@ -52,7 +54,7 @@ class LogIn extends Component {
     } else {
       passwordElement.type = "password";
     }
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { showHidePassword: !prevState.showHidePassword };
     });
   };
@@ -86,7 +88,7 @@ class LogIn extends Component {
             </p>
           </div>
           <form
-            onSubmit={event => this.logInFormSubmitHandler(event)}
+            onSubmit={(event) => this.logInFormSubmitHandler(event)}
             className={classes.LogIn_Form}
           >
             <Input
@@ -94,7 +96,7 @@ class LogIn extends Component {
               id="email"
               info="Email address should contain '@' character."
               placeholder="Email Address"
-              onChange={event => this.inputChangeHandler(event)}
+              onChange={(event) => this.inputChangeHandler(event)}
               name="email"
               value={this.state.logInForm.email}
               label="Email Address"
@@ -104,7 +106,7 @@ class LogIn extends Component {
               type="password"
               id="password"
               placeholder="Password"
-              onChange={event => this.inputChangeHandler(event)}
+              onChange={(event) => this.inputChangeHandler(event)}
               name="password"
               value={this.state.logInForm.password}
               label="Password"
@@ -119,29 +121,33 @@ class LogIn extends Component {
               LogIn
             </button>
           </form>
+          <p className={`${utilClasses.Paragraph}`}>
+            Don't have an account ?
+            <Link to="/signup" className={classes.LogIn_LogInFormLink}>
+              {" "}
+              Create account here.
+            </Link>
+          </p>
         </div>
       </main>
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     authLogInFormLoading: state.authReducer.authLogInFormLoading,
     somethingWentWrong: state.authReducer.somethingWentWrong,
     authLogInFormErrors: state.authReducer.authLogInFormErrors,
-    isAuthenticated: state.authReducer.isAuthenticated
+    isAuthenticated: state.authReducer.isAuthenticated,
   };
 };
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onAuthLogIn: (userData, history) =>
       dispatch(actions.authLogIn(userData, history)),
     onSomethingWentWrongClose: () =>
-      dispatch(actions.authSomethingWentWrongCloseHandler())
+      dispatch(actions.authSomethingWentWrongCloseHandler()),
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(LogIn);
+export default connect(mapStateToProps, mapDispatchToProps)(LogIn);
